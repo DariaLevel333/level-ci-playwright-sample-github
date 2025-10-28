@@ -6,7 +6,7 @@ export default {
  server: "https://api.dev.userway.dev",
  reportPaths: ['./level-ci-reports'],
  override: {
-    'main': {
+    'branch-4': {
       scope: 'delta',
     },
   },
