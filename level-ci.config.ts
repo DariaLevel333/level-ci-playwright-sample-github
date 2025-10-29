@@ -4,12 +4,7 @@ export default {
  project: "level-ci-playwright-sample-github",
  token: process.env.LEVEL_CI_TOKEN,
  server: "https://api.dev.userway.dev",
- reportPaths: ['./level-ci-reports'],
- override: {
-    'branch-4': {
-      scope: 'delta',
-    },
-  },
+ reportPaths: ['./level-ci-reports']
 } satisfies Config;
 
 //ngrok
