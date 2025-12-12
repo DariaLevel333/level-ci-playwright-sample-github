@@ -43,6 +43,8 @@ jobs:
 
       - name: Level CI Accessibility Analysis
         uses: levelaccess/level-ci@dev
+        env:
+          NGROK_AUTHTOKEN: ${{ secrets.NGROK_AUTHTOKEN }}
         with:
           token: ${{ secrets.LEVEL_CI_TOKEN }}
           report_paths: './level-ci-reports'
