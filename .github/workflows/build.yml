@@ -29,7 +29,7 @@ jobs:
       # Using http-server as an example; you can use your own start script
       - name: Start local web server on 1342
         run: |
-          npx http-server . -p 1342 --silent &
+          npx http-server src -p 1342 --silent &
           echo "Server PID: $!"
 
       # Wait for the server to be reachable
