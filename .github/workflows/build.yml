@@ -22,9 +22,20 @@ jobs:
           cache: 'npm'
       - name: Install npm packages
         run: npm ci
-             curl -I http://localhost:1342/
         env:
           CLOUDSMITH_TOKEN: ${{ secrets.CLOUDSMITH_TOKEN }}
+      
+      # Serve the site on port 1342 (adjust command to your project)
+      # Using http-server as an example; you can use your own start script
+      - name: Start local web server on 1342
+        run: |
+          npx http-server . -p 1342 --silent &
+          echo "Server PID: $!"
+
+      # Wait for the server to be reachable
+      - name: Wait for localhost:1342
+        run: npx wait-on http://127.0.0.1:1342
+
       - name: Install Playwright browsers
         run: npx playwright install chromium
       - name: Run Playwright tests
