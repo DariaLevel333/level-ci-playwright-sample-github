@@ -6,7 +6,7 @@ export default {
  token: process.env.LEVEL_CI_TOKEN,
  server: "https://api.dev.userway.dev",
  connection: ngrokConnection({
-    authtoken: process.env.NGROK_AUTHTOKEN,
+    authtoken: "35mmkGNEJ9rWvXfX3LYE1N67BUG_34NhuwfrhPFsnF88SEYST",
     addr: 'http://localhost:1342',
 
     }),
