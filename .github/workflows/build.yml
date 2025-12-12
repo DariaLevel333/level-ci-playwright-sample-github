@@ -21,8 +21,7 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - name: Install npm packages
-        run: |
-             npm ci
+        run: npm ci
              curl -I http://localhost:1342/
         env:
           CLOUDSMITH_TOKEN: ${{ secrets.CLOUDSMITH_TOKEN }}
