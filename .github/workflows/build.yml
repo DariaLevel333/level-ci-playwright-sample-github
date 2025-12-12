@@ -21,7 +21,10 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - name: Install npm packages
-        run: npm ci
+        run: |
+             npm ci
+             nohup npm run dev > output.log 2>&1 &
+             sleep 5
              curl -I http://localhost:1342/
         env:
           CLOUDSMITH_TOKEN: ${{ secrets.CLOUDSMITH_TOKEN }}
