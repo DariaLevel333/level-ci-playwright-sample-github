@@ -5,28 +5,28 @@ export default {
  project: "level-ci-playwright-sample-github",
  token: process.env.LEVEL_CI_TOKEN,
  server: "https://api.dev.userway.dev",
- connection: ngrokConnection({
-    authtoken: process.env.NGROK_AUTHTOKEN,
-    addr: 'http://localhost:1342',
-    }),
-  pages: [
-      {url: "/index.html", devices: ["desktop"]}
-    ],
+ override: {
+    "branch-a": {
+      scope: "delta",
+    },
+  },
  reportPaths: ['./level-ci-reports']
 } satisfies Config;
 
-//ngrok
-// import type { Config } from '@level-ci/cli'
-// import { ngrokConnection } from '@level-ci/ngrok'
- 
+
+// import type { Config } from "@level-ci/cli";
+// import { ngrokConnection } from '@level-ci/ngrok';
 // export default {
-//   organization: 'volodymyr-kulyk-40-userway-org-lando',
-//   project: 'sample-project-ngrok',
-//   token: process.env.LEVEL_CI_TOKEN,
-//   server: "https://api.dev.userway.dev",
-//   connection: ngrokConnection({
+//  organization: "daria-osokina-1-levelaccess-com-kofcj",
+//  project: "level-ci-playwright-sample-github",
+//  token: process.env.LEVEL_CI_TOKEN,
+//  server: "https://api.dev.userway.dev",
+//  connection: ngrokConnection({
+//     authtoken: process.env.NGROK_AUTHTOKEN,
 //     addr: 'http://localhost:1342',
-//     authtoken: "2hpftK26ATCj6DnGdXhcpoRnLDB_3Sda24QiS8fGYYRWTFgxd",
-//   }),
-//   pages: [{ url: '/article.html' }],
-// } satisfies Config
+//     }),
+//   pages: [
+//       {url: "/index.html", devices: ["desktop"]}
+//     ],
+//  reportPaths: ['./level-ci-reports']
+// } satisfies Config;

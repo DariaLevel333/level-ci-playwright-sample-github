@@ -6,7 +6,7 @@ on:
   push:
     branches:
       - main
-      - branch-5
+      - branch-a
       - develop
       - "release/**"
       - "hotfix/**"
@@ -24,17 +24,6 @@ jobs:
         run: npm ci
         env:
           CLOUDSMITH_TOKEN: ${{ secrets.CLOUDSMITH_TOKEN }}
-      
-      # Serve the site on port 1342 (adjust command to your project)
-      # Using http-server as an example; you can use your own start script
-      - name: Start local web server on 1342
-        run: |
-          npx http-server src -p 1342 --silent &
-          echo "Server PID: $!"
-
-      # Wait for the server to be reachable
-      - name: Wait for localhost:1342
-        run: npx wait-on http://127.0.0.1:1342
 
       - name: Install Playwright browsers
         run: npx playwright install chromium
@@ -43,9 +32,6 @@ jobs:
 
       - name: Level CI Accessibility Analysis
         uses: levelaccess/level-ci@dev
-        env:
-          LEVEL_CI_TOKEN: ${{ secrets.LEVEL_CI_TOKEN }}
-          NGROK_AUTHTOKEN: ${{ secrets.NGROK_AUTHTOKEN }}
         with:
           token: ${{ secrets.LEVEL_CI_TOKEN }}
           report_paths: './level-ci-reports'
