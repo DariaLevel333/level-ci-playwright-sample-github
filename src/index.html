@@ -78,13 +78,13 @@
                 </ul>
                 <span class="nav-item social-icons">
                     <span class="fa-stack">
-                        <a href="#your-link">
+                        <a href="#your-link" aria-label="Visit our Facebook page">
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="fab fa-facebook-f fa-stack-1x"></i>
                         </a>
                     </span>
                     <span class="fa-stack">
-                        <a href="#your-link">
+                        <a href="#your-link" aria-label="Visit our Twitter page">
                             <i class="fas fa-circle fa-stack-2x"></i>
                             <i class="fab fa-twitter fa-stack-1x"></i>
                         </a>
@@ -495,19 +495,23 @@
                             <div class="row" >
                                 <div class="col-lg-6">
                                     <div class="form-group py-2">
+                                        <label class="visually-hidden" for="exampleFormControlInput1">Your name</label>
                                         <input type="text" class="form-control form-control-input" id="exampleFormControlInput1" placeholder="Enter name">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group py-2">
+                                        <label class="visually-hidden" for="exampleFormControlInput2">Your phone number</label>
                                         <input type="email" class="form-control form-control-input" id="exampleFormControlInput2" placeholder="Enter phone number">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group py-1">
+                                <label class="visually-hidden" for="exampleFormControlInput3">Your email address</label>
                                 <input type="email" class="form-control form-control-input" id="exampleFormControlInput3" placeholder="Enter email">
                             </div>
                             <div class="form-group py-2">
+                                <label class="visually-hidden" for="exampleFormControlTextarea1">Your message</label>
                                 <textarea class="form-control form-control-input" id="exampleFormControlTextarea1" rows="6" placeholder="Message"></textarea>
                             </div>
                         </div>
@@ -572,17 +576,17 @@
                     <p class="py-3 para-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi repudiandae explicabo esse maxime, impedit rem voluptatibus amet error quas.</p>
                     <div class="d-flex">
                         <div class="me-3">
-                            <a href="#your-link">
+                            <a href="#your-link" aria-label="Visit our Facebook page">
                                 <i class="fab fa-facebook-f fa-2x py-2"></i>
                             </a>
                         </div>
                         <div class="me-3">
-                            <a href="#your-link">
+                            <a href="#your-link" aria-label="Visit our Twitter page">
                                 <i class="fab fa-twitter fa-2x py-2"></i>
                             </a>
                         </div>
                         <div class="me-3">
-                            <a href="#your-link">
+                            <a href="#your-link" aria-label="Visit our Instagram page">
                                 <i class="fab fa-instagram fa-2x py-2"></i>
                             </a>
                         </div>
@@ -642,7 +646,9 @@
                     <div class="d-flex align-items-center">
                         <div class="input-group mb-3">
                             <input type="text" class="form-control p-2" placeholder="Enter Email" aria-label="Recipient's email">
-                            <button class="btn-secondary text-light"><i class="fas fa-envelope fa-lg"></i></button>
+                            <button class="btn-secondary text-light" aria-label="Subscribe to our newsletter">
+                                <i class="fas fa-envelope fa-lg"></i>
+                            </button>
                         </div>
                     </div>
                 </div> <!-- end of col -->
