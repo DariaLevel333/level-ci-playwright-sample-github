@@ -6,8 +6,8 @@
     "test:playwright": "npx playwright test"
   },
   "devDependencies": {
-    "@level-ci/a11y-playwright": "^0.1.1-dev-20251022112206",
-    "@level-ci/cli": "^0.1.8-alpha.41",
+    "@level-ci/a11y-playwright": "^0.1.1-preview-20260226145108",
+    "@level-ci/cli": "^0.1.12-alpha.2860",
     "@level-ci/ngrok": "^0.1.4-alpha.27",
     "@playwright/test": "^1.57.0",
     "@types/node": "^24.5.2",
