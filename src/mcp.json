@@ -1,0 +1,12 @@
+{
+    "servers": {
+        "level-ci-mcp-dev": {
+            "url": "https://mcp.dev.uw.ci.levelaccess.io/mcp",
+            "type": "http",
+            "headers": {
+                "authorization": "Bearer {projectToken}"
+            }
+        }
+    },
+    "inputs": []
+}
