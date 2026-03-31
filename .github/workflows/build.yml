@@ -31,7 +31,7 @@ jobs:
         run: npm run test:playwright
 
       - name: Level CI Accessibility Analysis
-        uses: levelaccess/level-ci@734699300b7aea3ad3f924accb9c4ce93c0e7c77
+        uses: levelaccess/level-ci@dev
         env:
           LEVEL_CI_TOKEN: ${{ secrets.LEVEL_CI_TOKEN }}
           NGROK_AUTHTOKEN: ${{ secrets.NGROK_AUTHTOKEN }}
