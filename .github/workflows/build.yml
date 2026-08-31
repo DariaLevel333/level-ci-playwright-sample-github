@@ -6,7 +6,7 @@ on:
   push:
     branches:
       - main
-      - branch-cat
+      - a-branch
       - develop
       - "release/**"
       - "hotfix/**"

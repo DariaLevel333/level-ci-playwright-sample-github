@@ -6,8 +6,8 @@ export default {
  token: process.env.LEVEL_CI_TOKEN,
  server: "https://api.dev.userway.dev",
  override: {
-    "branch-cat": {
-      scope: "delta",
+    "a-branch": {
+      scope: "overall",
     },
   },
  reportPaths: ['./level-ci-reports']
